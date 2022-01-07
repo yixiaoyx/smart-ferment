@@ -1,5 +1,7 @@
 # Smart Fermentation Box
 
+![Example Dashboard](./example_dashboard.png)
+
 Smart Fermentation Box built with [Home Assistant](https://www.home-assistant.io/) running on Raspberry Pi.
 
 It is being used to ferment yoghurt, kombucha, sourdough bread, sauerkraut, etc. The smart temperature control (and humidity control to come) with monitoring and alerting solves the greatest challenge in any kind of fermentation, and makes it a breeze to produce good, consistent fermentation results every time. The digital and wireless nature of the solution minimizes wiring and the risk of physical damage (such as circuit issues caused by humidity), and is more portable and flexible than the conventional analog way, while still being affordable for home use.
@@ -29,4 +31,3 @@ Note that if the desired temperature is colder than the environment, the tempera
 
 More features to come...
 
-![Example Dashboard](./example_dashboard.png)
