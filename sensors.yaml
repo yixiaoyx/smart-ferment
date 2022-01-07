@@ -1,0 +1,8 @@
+- platform: inkbird
+  devices:
+    - mac: '' # replace this with your device MAC address
+      name: 'Ferment Box Environment'
+      monitored_conditions:
+        - temperature
+        - humidity
+        - battery

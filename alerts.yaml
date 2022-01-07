@@ -1,0 +1,11 @@
+ferment_box_temperature:
+  name: 'Ferment box temperature too high or too low'
+  entity_id: binary_sensor.ferment_box_temperature_anomaly
+  state: 'on'
+  repeat: 5
+  notifiers:
+    - mobile_app_screwdriver
+  title: 'Ferment Box'
+  message: >
+    {% set temperature = states('sensor.ferment_box_environment_temperature') | float %} 
+    Temperature anomaly {{ temperature }} °C

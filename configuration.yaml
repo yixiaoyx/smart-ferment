@@ -1,0 +1,33 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+alert: !include alerts.yaml
+template: !include templates.yaml
+sensor: !include sensors.yaml
+input_number: !include input_numbers.yaml
+
+logger:
+  default: warning
+
+climate:
+  - platform: generic_thermostat
+    unique_id: ferment_box_thermostat
+    name: 'Ferment Box'
+    heater: switch.heating_mat_plug
+    target_sensor: sensor.ferment_box_environment_temperature
+    min_temp: 0
+    max_temp: 62
+    target_temp: 27.4
+    cold_tolerance: 0.1
+    hot_tolerance: 0
+    initial_hvac_mode: 'heat'
+

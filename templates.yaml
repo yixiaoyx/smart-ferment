@@ -1,0 +1,8 @@
+- unique_id: 'ferment_box_temperature_anomaly'
+  binary_sensor:
+    name: 'Ferment box temperature anomaly'
+    state: >
+      {% set temperature = states('sensor.ferment_box_environment_temperature') | float(default=28) %} 
+      {% set temp_min = states('input_number.ferment_temp_min') | float(default=25) %} 
+      {% set temp_max = states('input_number.ferment_temp_max') | float(default=30) %} 
+      {{ temperature < temp_min or temperature > temp_max }}
