@@ -29,3 +29,4 @@ Note that if the desired temperature is colder than the environment, the tempera
 
 More features to come...
 
+[Example Dashboard](./example_dashboard.png)
